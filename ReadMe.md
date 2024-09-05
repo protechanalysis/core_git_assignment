@@ -4,6 +4,7 @@
 This repository contains Bash scripts and SQL queries designed to manage a simple ETL pipeline and perform data analysis on competitor data from Parch and Posey. The project includes extracting, transforming automating these processes with cron jobs, loading CSV data in the PostgreSQL database using bash scripting, and performing SQL queries to derive insights from a PostgreSQL database. It also contains a script that moves CSV and JSON file formats.
 
 ### Bash Script for ETL Pipeline
+![cron_etl](cron_etl.png)
 
 #### Extract
 The Bash script downloads a CSV file from a given URL (defined as an environment variable) and saves it into a raw folder.
