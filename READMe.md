@@ -17,12 +17,27 @@ The transformed data is saved into a file named 2023_year_finance.csv in the Tra
 #### Load
 The transformed file is moved into a Gold folder, and the script confirms that it was successfully loaded.
 
+The script for processes can be found [here](scripts/bash_script/annual_etl.sh)
+
+#### cron automation
+The command below creates a cron job which schedule the script to run daily at 12:00 AM
+````
+# Open crontab
+crontab -e
+
+# Add the following line to schedule the script
+0 0 * * * /bin/sh /path/to/annual_etl.sh 
+````
 
 
 ### Moving CSV and JSON Files
 A separate Bash script moves all CSV and JSON files from a specified source folder to json_and_csv. This script handles one or more files simultaneously and confirms successful movement.
+The script for processes can be found [here](scripts/bash_script/moving_json_and_csv.sh)
 
-![Postgres etl](postgres_etl.png)
 
 ### Importing CSV Files into PostgreSQL
 The Bash script import_csv_to_postgres.sh is used to import multiple CSV files into a PostgreSQL database named Posey. It loops through all the CSV files in a directory and copies them into the specified PostgreSQL table using the \copy command.
+The script for processes can be found [here](scripts/bash_script/importing_csv_to_postgres.sh)
+
+### Manager Questions
+Solutions to the questions posed by the manager can be found [here](scripts/sql_script/sql_query.sql)
