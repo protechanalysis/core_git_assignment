@@ -21,7 +21,7 @@ The transformed file is moved into a Gold folder, and the script confirms that i
 ### Moving CSV and JSON Files
 A separate Bash script moves all CSV and JSON files from a specified source folder to json_and_csv. This script handles one or more files simultaneously and confirms successful movement.
 
-![Postgres etl]()
+![Postgres etl](etl.png)
 
 ### Importing CSV Files into PostgreSQL
 The Bash script import_csv_to_postgres.sh is used to import multiple CSV files into a PostgreSQL database named Posey. It loops through all the CSV files in a directory and copies them into the specified PostgreSQL table using the \copy command.
